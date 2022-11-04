@@ -4,10 +4,13 @@ jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: A job to say hello
-    steps:
+    steps:   
+        # Checks repo under $GITHUB_WORKSHOP, so your job can access it
+      - uses: actions/checkout@v2
+      
       - name: Hello world action step
         id: hello
-        uses: BILLKATO/JRVS
+        uses: BILLKATO/JRVS@master
         with:
           who-to-greet: 'Gabriel Mitsuo Kaiya'
       # Use the output from the `hello` step
