@@ -10,7 +10,7 @@ jobs:
       
       - name: Hello world action step
         id: hello
-        uses: BILLKATO/JRVS@master
+        uses: BILLKATO/JRVS@main
         with:
           who-to-greet: 'Gabriel Mitsuo Kaiya'
       # Use the output from the `hello` step
