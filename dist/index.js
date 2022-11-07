@@ -12489,7 +12489,7 @@ module.exports = require("zlib");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"canvas","_id":"canvas@2.10.2","_inBundle":false,"_integrity":"sha512-FSmlsip0nZ0U4Zcfht0qBJqDhlfGuevTZKE8h+dBOYrJjGvY3iqMGSzzbvkaFhvMXiVxfcMaPHS/kge++T5SKg==","_location":"/canvas","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"canvas","name":"canvas","escapedName":"canvas","rawSpec":"","saveSpec":null,"fetchSpec":"latest"},"_requiredBy":["#USER","/"],"_resolved":"https://registry.npmjs.org/canvas/-/canvas-2.10.2.tgz","_shasum":"66d827e24acd6c34667453728e13d337417d4b20","_spec":"canvas","_where":"C:\\\\Users\\\\bielm\\\\Desktop\\\\Programas node\\\\JRVS","author":{"name":"TJ Holowaychuk","email":"tj@learnboost.com"},"binary":{"module_name":"canvas","module_path":"build/Release","host":"https://github.com/Automattic/node-canvas/releases/download/","remote_path":"v{version}","package_name":"{module_name}-v{version}-{node_abi}-{platform}-{libc}-{arch}.tar.gz"},"browser":"browser.js","bugs":{"url":"https://github.com/Automattic/node-canvas/issues"},"bundleDependencies":false,"contributors":[{"name":"Nathan Rajlich","email":"nathan@tootallnate.net"},{"name":"Rod Vagg","email":"r@va.gg"},{"name":"Juriy Zaytsev","email":"kangax@gmail.com"}],"dependencies":{"@mapbox/node-pre-gyp":"^1.0.0","nan":"^2.17.0","simple-get":"^3.0.3"},"deprecated":false,"description":"Canvas graphics API backed by Cairo","devDependencies":{"@types/node":"^10.12.18","assert-rejects":"^1.0.0","dtslint":"^4.0.7","express":"^4.16.3","js-yaml":"^4.1.0","mocha":"^5.2.0","pixelmatch":"^4.0.2","standard":"^12.0.1","typescript":"^4.2.2"},"engines":{"node":">=6"},"files":["binding.gyp","lib/","src/","util/","types/index.d.ts"],"homepage":"https://github.com/Automattic/node-canvas","keywords":["canvas","graphic","graphics","pixman","cairo","image","images","pdf"],"license":"MIT","main":"index.js","name":"canvas","repository":{"type":"git","url":"git://github.com/Automattic/node-canvas.git"},"scripts":{"benchmark":"node benchmarks/run.js","dtslint":"dtslint types","generate-wpt":"node ./test/wpt/generate.js","install":"node-pre-gyp install --fallback-to-build --update-binary","lint":"standard examples/*.js test/server.js test/public/*.js benchmarks/run.js lib/context2d.js util/has_lib.js browser.js index.js","prebenchmark":"node-gyp build","pretest-server":"node-gyp build","test":"mocha test/*.test.js","test-server":"node test/server.js","test-wpt":"mocha test/wpt/generated/*.js"},"types":"types/index.d.ts","version":"2.10.2"}');
+module.exports = JSON.parse('{"_from":"canvas@^2.10.2","_id":"canvas@2.10.2","_inBundle":false,"_integrity":"sha512-FSmlsip0nZ0U4Zcfht0qBJqDhlfGuevTZKE8h+dBOYrJjGvY3iqMGSzzbvkaFhvMXiVxfcMaPHS/kge++T5SKg==","_location":"/canvas","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"canvas@^2.10.2","name":"canvas","escapedName":"canvas","rawSpec":"^2.10.2","saveSpec":null,"fetchSpec":"^2.10.2"},"_requiredBy":["#USER","/"],"_resolved":"https://registry.npmjs.org/canvas/-/canvas-2.10.2.tgz","_shasum":"66d827e24acd6c34667453728e13d337417d4b20","_spec":"canvas@^2.10.2","_where":"C:\\\\Users\\\\bielm\\\\Desktop\\\\Programas node\\\\JRVS","author":{"name":"TJ Holowaychuk","email":"tj@learnboost.com"},"binary":{"module_name":"canvas","module_path":"build/Release","host":"https://github.com/Automattic/node-canvas/releases/download/","remote_path":"v{version}","package_name":"{module_name}-v{version}-{node_abi}-{platform}-{libc}-{arch}.tar.gz"},"browser":"browser.js","bugs":{"url":"https://github.com/Automattic/node-canvas/issues"},"bundleDependencies":false,"contributors":[{"name":"Nathan Rajlich","email":"nathan@tootallnate.net"},{"name":"Rod Vagg","email":"r@va.gg"},{"name":"Juriy Zaytsev","email":"kangax@gmail.com"}],"dependencies":{"@mapbox/node-pre-gyp":"^1.0.0","nan":"^2.17.0","simple-get":"^3.0.3"},"deprecated":false,"description":"Canvas graphics API backed by Cairo","devDependencies":{"@types/node":"^10.12.18","assert-rejects":"^1.0.0","dtslint":"^4.0.7","express":"^4.16.3","js-yaml":"^4.1.0","mocha":"^5.2.0","pixelmatch":"^4.0.2","standard":"^12.0.1","typescript":"^4.2.2"},"engines":{"node":">=6"},"files":["binding.gyp","lib/","src/","util/","types/index.d.ts"],"homepage":"https://github.com/Automattic/node-canvas","keywords":["canvas","graphic","graphics","pixman","cairo","image","images","pdf"],"license":"MIT","main":"index.js","name":"canvas","repository":{"type":"git","url":"git://github.com/Automattic/node-canvas.git"},"scripts":{"benchmark":"node benchmarks/run.js","dtslint":"dtslint types","generate-wpt":"node ./test/wpt/generate.js","install":"node-pre-gyp install --fallback-to-build --update-binary","lint":"standard examples/*.js test/server.js test/public/*.js benchmarks/run.js lib/context2d.js util/has_lib.js browser.js index.js","prebenchmark":"node-gyp build","pretest-server":"node-gyp build","test":"mocha test/*.test.js","test-server":"node test/server.js","test-wpt":"mocha test/wpt/generated/*.js"},"types":"types/index.d.ts","version":"2.10.2"}');
 
 /***/ }),
 
@@ -12549,13 +12549,25 @@ const GIFEncoder = __nccwpck_require__(2846);
 const fs = __nccwpck_require__(7147);
 
 try {
+    console.log(`Processo iniciado`);
+   // `who-to-greet` input defined in action metadata file
+   const nameToGreet = core.getInput('who-to-greet');
+   console.log(`Hello ${nameToGreet}!`);
+   const time = (new Date()).toTimeString();
+   core.setOutput("time", time);
+   // Get the JSON webhook payload for the event that triggered the workflow
+   const payload = JSON.stringify(github.context.payload, undefined, 2)
+   console.log(`The event payload: ${payload}`);
+      
     var size = 200;
-
     const canvas = cvs.createCanvas(size,size) // set the height and width of the canvas
     const ctx = canvas.getContext('2d');
+    console.log(`Canvas Criado`);
+
     const encoder = new GIFEncoder(size,size);
     encoder.setDelay(100);
     encoder.start(); // starts the encoder
+    console.log(`Enconder iniciado`);
 
     const background = () => {
         ctx.fillStyle = '##ff9505';
@@ -12568,47 +12580,46 @@ try {
      ctx.fillStyle = '#cc5803';
      ctx.fillRect(0, 0, slice, size);
      encoder.addFrame(ctx);
+     console.log(`Frame 1 concluido`);
      
      // frame 2
      background();
      ctx.fillStyle = '#e2711d';
      ctx.fillRect(slice, 0, slice, size);
      encoder.addFrame(ctx);
+     console.log(`Frame 2 concluido`);
      
      // frame 3
      background();
      ctx.fillStyle = '#fc7b03';
      ctx.fillRect(slice * 2, 0, slice, size);
      encoder.addFrame(ctx);
+     console.log(`Frame 3 concluido`);
      
      // frame 4
      background();
      ctx.fillStyle = '#ffb627';
      ctx.fillRect(slice * 3, 0, slice, size);
      encoder.addFrame(ctx);
+     console.log(`Frame 4 concluido`);
      
      // frame 5
      background();
      ctx.fillStyle = '#ffc971';
      ctx.fillRect(slice * 4, 0, slice, size);
      encoder.addFrame(ctx);
+     console.log(`Frame 5 concluido`);
      
      // end the encoding
      encoder.finish();
+     console.log(`Enconder Finalizado`);
 
      const buffer = encoder.out.getData();
      fs.writeFile('example.gif', buffer, error => {
         error ? console.log(error) : null;
-     });    
+     });
+     console.log(`Arquivo criado`);    
 
-  // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
-  const time = (new Date()).toTimeString();
-  core.setOutput("time", time);
-  // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
