@@ -5260,7 +5260,7 @@ module.exports = { DOMMatrix, DOMPoint }
 "use strict";
 
 
-const bindings = __nccwpck_require__(5837)
+const bindings = __nccwpck_require__(9220)
 
 module.exports = bindings
 
@@ -12342,10 +12342,11 @@ function wrappy (fn, cb) {
 
 /***/ }),
 
-/***/ 5837:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+/***/ 9220:
+/***/ ((module) => {
 
-module.exports = require(__nccwpck_require__.ab + "build/Release/canvas.node")
+module.exports = eval("require")("../build/Release/canvas.node");
+
 
 /***/ }),
 
