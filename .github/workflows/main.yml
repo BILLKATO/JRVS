@@ -32,7 +32,7 @@ jobs:
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
-         file-path: ./example.gif
+         file-path: example.gif
          commit-msg: Update resources
          branch: master
          github-token: ${{ secrets.GITHUB_TOKEN }}
