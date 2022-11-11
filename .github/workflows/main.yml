@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: windows-latest
-    name: A job to say hello
+    name: JarvisGif
     steps:   
         # Checks repo under $GITHUB_WORKSHOP, so your job can access it
       - name: Checkout action step
@@ -22,11 +22,7 @@ jobs:
       
       # listing files
       - name: Get files 1 time action step
-        run: dir
-        
-      # listing files
-      - name: Get files 2 time action step
-        run: ls    
+        run: dir         
       
       # Para as atualizações.
       - name: Update resources
@@ -34,5 +30,5 @@ jobs:
         with:
          file-path: example.gif
          commit-msg: Update resources
-         branch: master
+         branch: main
          github-token: ${{ secrets.GITHUB_TOKEN }}
