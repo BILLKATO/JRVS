@@ -11,10 +11,7 @@ try {
    console.log(`Hello ${nameToGreet}!`);
    const time = (new Date()).toTimeString();
    core.setOutput("time", time);
-   // Get the JSON webhook payload for the event that triggered the workflow
-   const payload = JSON.stringify(github.context.payload, undefined, 2)
-   console.log(`The event payload: ${payload}`);
-      
+
     var size = 200;
     const canvas = cvs.createCanvas(size,size) // set the height and width of the canvas
     const ctx = canvas.getContext('2d');
@@ -71,7 +68,7 @@ try {
      console.log(`Enconder Finalizado`);
 
      const buffer = encoder.out.getData();
-     fs.writeFile('example.gif', buffer, error => {
+     fs.writeFile('/home/runner/work/JRVS/JRVS/example.gif', buffer, error => {
         error ? console.log(error) : null;
      });
      console.log(`Arquivo criado`);    
