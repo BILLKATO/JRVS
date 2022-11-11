@@ -29,9 +29,10 @@ jobs:
         run: ls    
       
       # Para as atualizações.
-      - name: Push changes action step
-        uses: ad-m/github-push-action@master
+      - name: Update resources
+        uses: test-room-7/action-update-file@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-          force: true
+         file-path: ./example.gif
+         commit-msg: Update resources
+         branch: master
+         github-token: ${{ secrets.GITHUB_TOKEN }}
