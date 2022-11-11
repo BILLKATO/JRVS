@@ -7,7 +7,7 @@ jobs:
     steps:   
         # Checks repo under $GITHUB_WORKSHOP, so your job can access it
       - name: Checkout action step
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       
       # Generate JarvisGif
       - name: Generate Jarvis Gif action step
