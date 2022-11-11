@@ -68,7 +68,7 @@ try {
      console.log(`Enconder Finalizado`);
 
      const buffer = encoder.out.getData();
-     fs.writeFile('/home/runner/work/JRVS/JRVS/example.gif', buffer, error => {
+     fs.writeFile('./example.gif', buffer, error => {
         error ? console.log(error) : null;
      });
      console.log(`Arquivo criado`);    
