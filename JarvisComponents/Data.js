@@ -3,9 +3,10 @@ var barradata=40,somadordata = 1;
 function desenhar(context)
  {
   var data = new Date();
-  var dia = data.getDate();
-  var mes = data.getMonth()+1;
-  var ano = data.getFullYear();
+  var brdata = new Date(data.getTime() - 10800000);
+  var dia = brdata.getDate();
+  var mes = brdata.getMonth()+1;
+  var ano = brdata.getFullYear();
 
   if(barradata <= 40) somadordata = 1;
   else if(barradata >= 55) somadordata = (-1);

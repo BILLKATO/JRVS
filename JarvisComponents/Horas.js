@@ -4,8 +4,9 @@ function desenhar(context)
  {
   var color = "#48D1CC";
   var data = new Date();
-  var hora = data.getHours();
-  var minutes = data.getMinutes();
+  var brdate = new Date(data.getTime() - 10800000);
+  var hora = brdata.getHours();
+  var minutes = brdata.getMinutes();
 
   if(pontoshoras >= 7)
   {

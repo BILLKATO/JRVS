@@ -1,4 +1,7 @@
-on: [push]
+on:
+  schedule:
+      # Será atualizado a cada 1 minuto.
+    - cron: "*/1 * * * *"
 
 jobs:
   hello_world_job:
