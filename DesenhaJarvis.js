@@ -17,7 +17,8 @@ const Grade = require("./JarvisComponents/Grade.js");
 const Senoide = require("./JarvisComponents/Senoide.js");
 const GraficosSide = require("./JarvisComponents/GraficosSide.js");
 const ProgramLanguage = require("./JarvisComponents/ProgramLanguage.js");
-
+const Localization = require("./JarvisComponents/Localization.js");
+const Greetings = require("./JarvisComponents/Greetings.js");
 
 	function desenha(context, canvaswidth, canvasheight)
 	{
@@ -47,6 +48,8 @@ const ProgramLanguage = require("./JarvisComponents/ProgramLanguage.js");
 		Senoide.desenhar(context);
 		GraficosSide.desenhar(context);
 		ProgramLanguage.desenhar(context);
+		Localization.desenhar(context);
+		Greetings.desenhar(context);		
 	}
 
 module.exports = { desenha };
